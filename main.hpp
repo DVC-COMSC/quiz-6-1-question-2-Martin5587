@@ -7,11 +7,15 @@
 
 using namespace std;
 
-int writeFile(const string& filename) {
-    ofstream outFile(filename);
-    if (!outFile) {
-        cerr << "ERROR opening file" << endl;
+int writeFile() {
+    int numEmployees;
+    cout << "Enter the number of employees: ";
+    cin >> numEmployees;
+
+    ofstream outFile("employee.txt");
+    if(!outFile) {
+        cerr << "ERROR OPENING FILE." <, endl;
     }
 
-    int numEmployees = 3
+    int id;
 }
