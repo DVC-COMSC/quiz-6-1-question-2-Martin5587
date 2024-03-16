@@ -7,12 +7,12 @@
 
 using namespace std;
 
-int writeFile() {
+int writeFile(const std::string& filename) {
     int numEmployees;
     cout << "Enter the number of employees: ";
     cin >> numEmployees;
 
-    ofstream outFile("employee.txt");
+    ofstream outFile(filename);
     if(!outFile) {
         cerr << "ERROR OPENING FILE." << endl;
     }
@@ -30,13 +30,14 @@ int writeFile() {
     return numEmployees;
 }
 
-int readFile() {
-    ifstream inFile("Employee.txt");
+int readFile(const std::string& filename) {
+    ifstream inFile(filename);
     if (!inFile) {
         cerr << " ERROR OPENING FILE." << endl;
     }
     int empId;
     string name, department;
+    double salary;
     int numEmployees = 0;
 
     cout << "Employee Information: " << endl;
