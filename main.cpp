@@ -11,5 +11,5 @@ int main()
     cout << "File created with " << empN << " employee records\n";
 
     empN = readFile(filename);
-    cout << "The total number of employess read " << empN << endl;
+    cout << "The total number of employees read " << empN << endl;
 }
