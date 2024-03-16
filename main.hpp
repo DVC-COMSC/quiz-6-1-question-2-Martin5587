@@ -34,6 +34,18 @@ int readFile() {
     ifstream inFile("Employee.txt");
     if (!inFile) {
         cerr << " ERROR OPENING FILE." << endl;
-        
     }
+    int empId;
+    string name, department;
+    int numEmployees = 0;
+
+    cout << "Employee Information: " << endl;
+    while (inFile >> empId >> name >> department >> salary) {
+        cout << "Employee ID: " << empId << ", Name: " << name << ", Department: " << department << ", Salary: " << salary << endl;
+        numEmployees++;
+    }
+    inFile.close();
+    return numEmployees;
 }
+
+#endif
